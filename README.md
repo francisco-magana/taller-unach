@@ -1,10 +1,40 @@
-# ¿Que necesitamos?
+# Introducción
+
+Angular es un framework de desarrollo web basado en TypeScript que permite el desarrollo veloz y escalable de interfaces de usuario mediante el uso de componentes. Este tutorial se centrará en enseñar los conceptos básicos de Angular, con especial atención en los temas de Vista, Clase y Estilos, Pipes y Servicios. Aprenderás cómo crear componentes, cómo interactúan las vistas con las clases y cómo utilizar estilos CSS para personalizar tus componentes. También explorarás el uso de Pipes para transformar datos en la vista y cómo los servicios permiten consumir API's. Este tutorial está pensado para ir de la mano de una expicación del instructor del taller para comentar a detalle cada uno de los pasos que se van siguiendo.
+
+
+# ¿Porqué desarrollar una aplicación utilizando componentes?
+
+- Modularidad: Los componentes son bloques de código independientes y reutilizables que encapsulan la lógica de negocio y la interfaz de usuario de una aplicación web. Esto permite que los desarrolladores puedan trabajar en diferentes componentes de forma separada y coordinada, lo que facilita el mantenimiento y la escalabilidad de la aplicación.
+
+- Reutilización: Al utilizar componentes, los desarrolladores pueden crear bloques de código que se pueden reutilizar en diferentes partes de la aplicación. Esto reduce el tiempo y el esfuerzo necesario para desarrollar nuevas funcionalidades y mejora la consistencia y la coherencia de la aplicación.
+
+- Separación de preocupaciones: Al separar la lógica de negocio y la interfaz de usuario en diferentes componentes, se reduce la complejidad del código y se mejora la legibilidad y la mantenibilidad de la aplicación. Además, esto permite que diferentes equipos de desarrollo puedan trabajar en diferentes partes de la aplicación sin interferir con el trabajo de otros equipos.
+
+- Facilidad de prueba: Los componentes son bloques de código independientes que se pueden probar de forma aislada, lo que facilita la detección y corrección de errores y mejora la calidad y la fiabilidad de la aplicación.
+
+- Escalabilidad: Al utilizar componentes, se puede agregar o quitar funcionalidades de la aplicación de forma más sencilla y rápida, lo que mejora la capacidad de la aplicación para crecer y adaptarse a nuevas necesidades y requerimientos.
+
+# ¿Por qué Angular?
+
+- Arquitectura robusta: Angular utiliza una arquitectura basada en componentes que separa claramente la lógica de negocio y la interfaz de usuario, lo que mejora la escalabilidad y mantenibilidad de la aplicación.
+
+- TypeScript: Angular utiliza TypeScript, un lenguaje de programación que añade características adicionales a JavaScript, como la tipificación estática y otras características orientadas a objetos. Esto mejora la legibilidad y la seguridad del código y facilita el mantenimiento y la escalabilidad de la aplicación.
+
+- Gran comunidad y documentación: Angular cuenta con una gran comunidad de desarrolladores y una amplia documentación, lo que facilita la resolución de problemas y la adopción de buenas prácticas.
+
+- Herramientas integradas: Angular ofrece una gran cantidad de herramientas y características integradas, como la gestión de rutas, la inyección de dependencias, la validación de formularios, entre otras, que permiten a los desarrolladores crear aplicaciones web de forma más rápida y eficiente.
+
+- Flexibilidad: Angular es un framework altamente flexible y adaptable a diferentes necesidades y requerimientos. Además, se puede integrar fácilmente con otras herramientas y tecnologías, lo que lo convierte en una herramienta muy útil para el desarrollo de aplicaciones web complejas.
+
+
+# ¿Que necesitaremos para desarrollar este taller?
 
 - NodeJS - Runtime de JavasCript para el servidor
 - VScode o tu editor favorito 😉
 - GIT - Control de versiones
 
-Comprueba su instalación
+Comprueba que cuentes con las herramientas mencionadas antes de comenzar, para ello, puedes ejecutar los siguientes comandos:
 
 ```bash
 node --version
@@ -12,12 +42,11 @@ npm --version
 git --version
 ```
 
-# technical sophistication
+# Antes de comenzar, ¿Qué pasa si algo no funciona como me dice el tutorial?
 
-La combinación de habilidades blandas y tecnicas para poder solucionar un problema. ¡Usala!
+Es común que en el proceso de programación te encuentres con problemas o errores inesperados. En lugar de frustrarte, es importante que tengas la capacidad de buscar soluciones por tu cuenta. Esto no solo te hará un mejor programador, sino que te permitirá aprender nuevas habilidades y desarrollar tu capacidad de resolución de problemas. Recuerda que en el mundo de la programación siempre habrá desafíos, y enfrentarlos con una actitud amable y positiva te ayudará a superarlos de manera efectiva. Utiliza recursos como documentación, foros, tutoriales en línea y comunidades de programación para buscar soluciones y no dudes en pedir ayuda si es necesario. Con la práctica, pronto estarás resolviendo problemas con confianza y habilidad.
 
-
-![[Pasted image 20230316211816.png]]
+Este tutorial esta pensado para ser muy sencillo, pero en caso de que te encuentres con una dificultad en tu camino, no dejes de persistir hasta resolver el problema o acercate a tu instructor para poder solucionarlo.
 
 # Instalar angular CLI
 
@@ -165,6 +194,7 @@ Una vez comprendido brevemente como es que la vista, los estilos y la clase TS e
 # Actividad #1: Un contador
 
 1.- Deshagamos los cambios que hemos realizado anteriormente para poder comenzar la actividad.
+
 2.- Declaramos una variable llamada counter en el component. 
 
 ```typescript
