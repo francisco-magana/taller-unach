@@ -542,9 +542,255 @@ saveHistory(): void {
 ```
 
 
-# Puedes agregar un boton adicional que limpie el historial? Intentalo
+# ¿Puedes agregar un boton adicional que limpie el historial? Intentalo
 
+# Los pipes
 
-# TERMINAMOS CON NUESTRO TUTORIAL BASIQUISIMO DE ANGULAR 🥳🥳🥳
+Continuemos con una práctica distinta a la anterior, siguamos los siguientes pasos:
 
-# PROYECTO 2: (Aún) Más funcionalidades de angular.
+1.- Iniciamos un nuevo proyecto de angular de la misma manera en que lo hicimos anteriormente.
+
+```bash
+ng new new-project
+
+cd new-project
+
+ng serve
+```
+
+2.- Limpiamos la vista
+
+3.- Agregamos el siguiente código a la vista
+```html
+<div class="container">
+  <div class="card">random text 1</div>
+  <div class="card">random text 2</div>
+  <div class="card">random text 3</div>
+</div>
+```
+
+4.- Agregamos el siguiente código a los estilos
+```css
+.container {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 32px;
+    width: 30%;
+}
+```
+
+5.- Agregamos las siguientes variables a nuestro componente
+
+```typescript
+readonly name: string = "Soy francisco magana"
+readonly age: number = 28;
+readonly money: number = 12300.12;
+```
+
+6.- Las colocamos en los divs de la vista
+
+```html
+<div class="container">
+  <div class="card">{{name}}</div>
+  <div class="card">{{age}}</div>
+  <div class="card">{{money}}</div>
+</div>
+```
+
+7.- Agregamos nuestro primer div
+```html
+<div class="card">{{name | uppercase}}</div>
+```
+8.- ¿Que está pasando?
+
+En Angular, un "pipe" es una función que se utiliza para transformar los datos de un valor de entrada en otro valor de salida, de una forma determinada y predefinida.
+
+Por ejemplo, puedes tener un valor numérico que quieres mostrar como una moneda, y para hacer esto puedes utilizar el pipe "currency". También puedes tener una fecha que quieres mostrar en un formato determinado, para lo que puedes utilizar el pipe "date".
+
+Los pipes se utilizan en la plantilla HTML de Angular mediante el carácter "|" (pipe), seguido del nombre del pipe y, opcionalmente, de uno o varios argumentos entre paréntesis.
+
+En resumen, un pipe en Angular te permite transformar datos de una forma fácil y eficiente para que se muestren de la forma que deseas en la interfaz de usuario.
+
+9.- Agregamos los siguientes pipes
+```html
+<div class="card">{{name | uppercase}}</div>
+<div class="card">{{name | lowercase}}</div>
+<div class="card">{{name | titlecase}}</div>
+```
+
+10.- Agregamos el siguiente pipe
+```html
+<div class="card">{{age | percent}}</div>
+```
+
+11.- ¿Como hacemos que sea 20%? Intentalo
+
+12.- Agregamos el siguiente pipe
+```html
+<div class="card">{{money | currency}}</div>
+```
+
+13.- Ahora agreguemos un cambio mas
+```html
+  <div class="card">{{money | currency:'USD'}}</div>
+  <div class="card">{{money | currency:'EUR'}}</div>
+  <div class="card">{{money | currency:'MXN'}}</div>
+```
+
+# Listo, fue muy rápido
+
+Los pipes son herramientas muy utiles que nos ayudan a conseguir muchas cosas de manera sencilla y es un agregado de Angular que facilita el formateo de valores en la vista. Hay muchas cosas más que podemos hacer con los pipes, como el hecho de que podemos crear nuestros Pipes personalizados entre otras cosas.
+
+# Consumiendo una API con servicios
+
+1.- Cerramos el servidor de angular con CTRL + C
+
+2.- Ejecutamos el siguiente comando
+
+```bash
+ng g s services/using-api
+```
+
+3.- Arrancamos de nuevo el server
+
+```bash
+ng serve
+```
+
+4.- Importamos el HttpClientModule en el app.module
+```typescript
+import { HttpClientModule } from '@angular/common/http';
+```
+
+5.- Lo colocamos en los imports
+```typescript
+imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+```
+
+6.- Importamos el modulo http en el servicio que creamos
+
+```typescript
+import { HttpClient } from "@angular/common/http";
+```
+
+7.- Colocamos el modulo en el constructor
+```typescript
+constructor(public httpClient: HttpClient) { }
+```
+
+El parámetro "public httpClient" indica que se está inyectando el servicio HttpClient en la clase y se está declarando una variable llamada "httpClient" que puede ser utilizada en toda la clase.
+
+HttpClient es un servicio proporcionado por Angular que permite realizar solicitudes HTTP, como GET, POST, PUT y DELETE, a un servidor remoto. Este servicio está diseñado para ser utilizado en aplicaciones web para recuperar datos de una API RESTful.
+
+8.- Hacemos una funcion para hacer la request
+```typescript
+makeRequest() {
+    return this.httpClient.get('https://dummy.restapiexample.com/api/v1/employees');
+  }
+```
+
+Estamos usando una API Online de ejemplo.
+
+9.- Inyectamos el servicio en el app.component
+
+```typescript
+constructor(public api: UsingApiService) {}
+```
+
+10.- Ejecutamos la peticion en el constructor
+```typescript
+constructor(public api: UsingApiService) {
+    api.makeRequest().subscribe((res) => {
+      console.log(res)
+    })
+  }
+```
+11.- ¿Que esta pasando?
+Estamos realizando la llamada a la API mediante el servicio que hemos creado. Presta atención a tu instructor para poder comprender mejor como es que funcionan los obervables en RXJS.
+
+12.- Limpiemos la vista y agreguemos un boton para hacer la request
+
+```html
+<button (click)="request()">Make request</button>
+```
+
+13.- Actualicemos nuestro component
+
+```typescript
+  request() {
+    this.api.makeRequest().subscribe((res) => {
+      console.log(res)
+    })
+  }
+  constructor(public api: UsingApiService) {}
+```
+
+14.- Detengamos el servidor con CTRL + C
+
+15.- Creemos un nuevo componente para la tarjeta
+```bash
+ng g c components/card --skip-tests
+```
+
+16.- Arrancamos de nuevo el server
+```bash
+ng serve
+```
+
+17.- Modificamos la vista del componente que acabamos de crear
+```html
+<div class="card">
+    <p>My name is {{name | titlecase}}</p>
+    <p>My age is {{age}}</p>
+    <p>My salary is {{salary | currency:'MXN'}}</p>
+</div>
+```
+
+18.- Modificamos el componente
+```typescript
+@Input() name: string = "";
+@Input() age: number = 0;
+@Input() salary: number = 0;
+```
+
+19.- Modificamos los estilos
+```css
+.card {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 30%;
+}
+```
+
+20.- Modificamos el componente del app para obtener los resultados de la peticion
+```typescript
+  results: any[] = [];
+
+  request() {
+    this.api.makeRequest().subscribe((res: any) => {
+      this.results = res.data;
+    })
+  }
+```
+
+19.- La vista de app la dejaremos asi
+```html
+<button (click)="request()">Make request</button>
+<app-card *ngFor="let value of results" 
+            [name]="value.employee_name" 
+            [age]="value.employee_age"
+        [salary]="value.employee_salary">
+</app-card>
+```
+
+# Prestemos atención al instructor y continuemos con ejemplos más sencillos con los conocimientos que hemos adquirido.
