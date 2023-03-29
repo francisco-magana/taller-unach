@@ -1,9 +1,21 @@
 # Introducción
 
-Angular es un framework de desarrollo web basado en TypeScript que permite el desarrollo veloz y escalable de interfaces de usuario mediante el uso de componentes. Este tutorial se centrará en enseñar los conceptos básicos de Angular, con especial atención en los temas de Vista, Clase y Estilos, Pipes y Servicios. Aprenderás cómo crear componentes, cómo interactúan las vistas con las clases y cómo utilizar estilos CSS para personalizar tus componentes. También explorarás el uso de Pipes para transformar datos en la vista y cómo los servicios permiten consumir API's. Este tutorial está pensado para ir de la mano de una expicación del instructor del taller para comentar a detalle cada uno de los pasos que se van siguiendo.
+Angular es un framework de desarrollo web basado en TypeScript que permite el desarrollo veloz y escalable de interfaces de usuario mediante el uso de componentes. Este tutorial se centrará en enseñar los conceptos básicos de Angular, con especial atención en los temas de Vista, Clase y Estilos, Pipes y Servicios. Aprenderás cómo crear componentes, cómo interactúan las vistas con las clases y cómo utilizar estilos CSS para personalizar tus componentes. También explorarás el uso de Pipes para transformar datos en la vista y cómo los servicios permiten consumir API's. Este tutorial está pensado para ir de la mano de una explicación del instructor del taller para comentar a detalle cada uno de los pasos que se van siguiendo.
+
+# ¿Por qué utilizar un framework para desarrollar una aplicación front end?
+
+- Productividad: Los frameworks proporcionan herramientas y funcionalidades preconstruidas que permiten acelerar el proceso de desarrollo. Al utilizar estas herramientas, los desarrolladores pueden concentrarse en la lógica de negocio y las características únicas de la aplicación en lugar de tener que desarrollar todo desde cero.
+
+- Consistencia: Los frameworks proporcionan un conjunto de reglas y convenciones que garantizan que el código sea coherente y fácil de mantener. Esto es especialmente importante cuando se trabaja en equipo, ya que garantiza que todos los desarrolladores estén siguiendo las mismas prácticas y estándares.
+
+- Mantenibilidad: Los frameworks están diseñados para ser modulares y escalables, lo que facilita la adición de nuevas funcionalidades y la solución de problemas en el futuro. Esto permite a los desarrolladores realizar cambios de manera más rápida y eficiente en el futuro.
+
+- Comunidad de soporte: Muchos frameworks tienen una gran comunidad de usuarios y desarrolladores que contribuyen al código y ofrecen soporte y recursos para el desarrollo. Esto significa que los desarrolladores pueden encontrar soluciones rápidas y efectivas para cualquier problema que puedan tener.
+
+- Actualizaciones regulares: Los frameworks son actualizados regularmente para abordar problemas de seguridad, errores y agregar nuevas funcionalidades. Esto significa que los desarrolladores pueden mantenerse al día con las últimas tecnologías y mejores prácticas sin tener que investigar y actualizar el código manualmente.
 
 
-# ¿Porqué desarrollar una aplicación utilizando componentes?
+# ¿Por qué desarrollar una aplicación utilizando componentes?
 
 - Modularidad: Los componentes son bloques de código independientes y reutilizables que encapsulan la lógica de negocio y la interfaz de usuario de una aplicación web. Esto permite que los desarrolladores puedan trabajar en diferentes componentes de forma separada y coordinada, lo que facilita el mantenimiento y la escalabilidad de la aplicación.
 
@@ -28,7 +40,7 @@ Angular es un framework de desarrollo web basado en TypeScript que permite el de
 - Flexibilidad: Angular es un framework altamente flexible y adaptable a diferentes necesidades y requerimientos. Además, se puede integrar fácilmente con otras herramientas y tecnologías, lo que lo convierte en una herramienta muy útil para el desarrollo de aplicaciones web complejas.
 
 
-# ¿Que necesitaremos para desarrollar este taller?
+# ¿Qué necesitaremos para desarrollar este taller?
 
 - NodeJS - Runtime de JavasCript para el servidor
 - VScode o tu editor favorito 😉
@@ -46,7 +58,7 @@ git --version
 
 Es común que en el proceso de programación te encuentres con problemas o errores inesperados. En lugar de frustrarte, es importante que tengas la capacidad de buscar soluciones por tu cuenta. Esto no solo te hará un mejor programador, sino que te permitirá aprender nuevas habilidades y desarrollar tu capacidad de resolución de problemas. Recuerda que en el mundo de la programación siempre habrá desafíos, y enfrentarlos con una actitud amable y positiva te ayudará a superarlos de manera efectiva. Utiliza recursos como documentación, foros, tutoriales en línea y comunidades de programación para buscar soluciones y no dudes en pedir ayuda si es necesario. Con la práctica, pronto estarás resolviendo problemas con confianza y habilidad.
 
-Este tutorial esta pensado para ser muy sencillo, pero en caso de que te encuentres con una dificultad en tu camino, no dejes de persistir hasta resolver el problema o acercate a tu instructor para poder solucionarlo.
+Este tutorial está pensado para ser muy sencillo, pero en caso de que te encuentres con una dificultad en tu camino, no dejes de persistir hasta resolver el problema o acércate a tu instructor para poder solucionarlo.
 
 # Instalar angular CLI
 
@@ -78,7 +90,7 @@ Comprueba su instalación
 ng version
 ```
 
-Si haz obtenido respuesta de la interfaz de linea de comandos de angular...
+Si has obtenido respuesta de la interfaz de línea de comandos de angular...
 
 # ¡Estamos listos!
 
@@ -117,19 +129,15 @@ El comando `ng serve` es una herramienta muy útil para el proceso de desarrollo
 
 # Preparando nuestra vista
 
-Deberemos limpiar el contenido HTML del archivo 
+Deberemos limpiar el contenido HTML del archivo `app\app.component.html`
 
-```bash
-app\app.component.html
-```
-
-Cuando tengamos una vista vacia, habrá que colocar un H1 con el texto que nosotros deseemos. Por ejemplo:
+Cuando tengamos una vista vacía, habrá que colocar un H1 con el texto que nosotros deseemos. Por ejemplo:
 
 ```html
 <h1>¡Hola Angular!</h1>
 ```
 
-¿Que vemos aquí? Discutamoslo mientras jugamos con poco con la compilación de Angular 👀
+¿Qué vemos aquí? Discutamoslo juntos 👀
 
 # Utilizando nuestro componente
 
@@ -143,35 +151,30 @@ En Angular, los componentes son la unidad básica de construcción de la interfa
 
 ## Modificando nuestra vista nuevamente
 
-app.component.html
+En nuestro app.component.html coloquemos el siguiente código:
+
 ```html
 <div class="text-centered">
-  <h1 class="title">Hola mundo</h1>
+  <h1 class="title">Hola mundo</h1>
 </div>
 ```
 
-Vemos los cambios
-
-app.component.css
+En los estilos, el archivo app.component.css agreguemos lo siguiente:
 ```css
 .text-centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-  
-
 .title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 48px;
-    border-bottom: 8px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    border-bottom: 8px solid black;
 }
 ```
 
-Volvemos a ver los cambios.
-
-Hagamos unos cambios mas en la vista y en los estilos a nuestro gusto, la idea es que comprendamos como se relacionan estos elementos de la interfaz .
+Hagamos unos cambios más en la vista y en los estilos a nuestro gusto, la idea es que comprendamos cómo se relacionan estos elementos de la interfaz.
 
 ## Usando la clase TS de nuestro componente
 
@@ -189,9 +192,9 @@ Usemos la variable en la vista
 
 Hagamos este ejercicio con diferentes variables con distintos tipos de datos para observar sus resultados.
 
-Una vez comprendido brevemente como es que la vista, los estilos y la clase TS estan relacionados entre si, continuemos.
+Una vez comprendido brevemente cómo es que la vista, los estilos y la clase TS están relacionados entre sí, comencemos con las actividades.
 
-# Actividad #1: Un contador
+# Actividad #1: Un contador sencillo
 
 1.- Deshagamos los cambios que hemos realizado anteriormente para poder comenzar la actividad.
 
@@ -205,131 +208,133 @@ counter: number = 0;
 
 ```html
 <div class="container">
-  <button class="minus-button">-</button>
-  <p class="counter">{{counter}}</p>
-  <button class="plus-button">+</button>
+  <button class="minus-button">-</button>
+  <p class="counter">{{counter}}</p>
+  <button class="plus-button">+</button>
 </div>
 ```
 
-4.- Ajustamos nuestros estilos para dar un poco de vista a la aplicación.
+4.- Agregamos nuestros estilos para dar un poco de vista a la aplicación.
 
 ```css
 .container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .minus-button {
-    background-color: tomato;
-    padding: 32px;
-    font-size: 48px;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 16px;
-    transition: 0.3s;
-    margin: 8px;
+    background-color: tomato;
+    padding: 32px;
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    transition: 0.3s;
+    margin: 8px;
 }
 
 .minus-button:hover {
-    background-color: red;
+    background-color: red;
 }
 
 .plus-button {
-    background-color: springgreen;
-    padding: 32px;
-    font-size: 48px;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 16px;
-    transition: 0.3s;
-    margin: 8px;
+    background-color: springgreen;
+    padding: 32px;
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    transition: 0.3s;
+    margin: 8px;
 }
 
 .plus-button:hover {
-    background-color: green;
+    background-color: green;
 }
 
 .counter {
-    font-size: 48px;
-    margin: 0px 32px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    margin: 0px 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ```
 
-5.- Agregamos una funcion al componente para aumentar el contador
+5.- Agregamos una función al componente para aumentar el contador
 
 ```typescript
 plus(): void {
-    this.counter += 1;
+    this.counter += 1;
 }
 ```
 
-6.- Modificamos el boton de sumar para poder utilizar esta función
+6.- Modificamos el botón de sumar para poder utilizar esta función
 ```html
 <button class="plus-button" (click)="plus()">+</button>
 ```
+
+¿Que pasa si probamos la aplicación en este momento?
 
 7.- Hacemos la función para decrementar el contador
 
 ```typescript
 substract(): void {
-    this.counter -= 1;
+    this.counter -= 1;
 }
 ```
 
-8.- Modificamos el boton de restar para poder utilizar esta función
+8.- Modificamos el botón de restar para poder utilizar esta función
 ```typescript
 <button class="minus-button" (click)="substract()">-</button>
 ```
 
-## Tenemos un contador funcional en pocos pasos
+## Tenemos un contador funcional en pocos pasos 🎉🎉🎉
 
-### ¿Puedes hacer un boton a cada lado que sume de 5 en 5 🤔?
+### ¿Puedes hacer un botón a cada lado que sume de 5 en 5 🤔?
 
 ¡INTENTALO!
 
 ![image](https://user-images.githubusercontent.com/64680073/228128950-3aa9f3a5-c6f0-47c7-bcc7-fe999ba697c1.png)
 
-# Terminamos? Genial!
+# ¿Terminamos? ¡Genial!
 
 # Actividad #2: Guardar un historial
 
-1.- Modificamos nuestro HTML para agregar un nuevo boton.
+1.- Modificamos nuestro HTML para agregar un nuevo botón.
 
 ```html
 <button class="plus-button">Save</button>
 ```
 
-2.- Creamos una interfaz en Typescript para poder definir los datos del arreglo.
+2.- Creamos una interfaz en Typescript para poder definir los datos del arreglo en el que guardaremos el historial.
 
 ```typescript
 interface historyRecord {
-  count: number;
-  date: Date
+  count: number;
+  date: Date
 }
 ```
 
-3.- Declaramos el arreglo
+3.- Declaramos el arreglo como una variable utilizando la definción que realizamos anteriormente.
 
 ```typescript
 history: historyRecord[] = [];
 ```
 
-4.- Creamos una función sencilla para guardar en el historial mediante un push de un objeto.
+4.- Creamos una función sencilla para guardar en el historial mediante un push de un objeto al arreglo.
 
 ```typescript
-  saveHistory(): void {
-    this.history.push({
-      count: this.counter,
-      date: new Date().toLocaleString()
-    });
-    console.log(this.history)
-  }
+  saveHistory(): void {
+    this.history.push({
+      count: this.counter,
+      date: new Date().toLocaleString()
+    });
+    console.log(this.history)
+  }
 ```
 
 5.- La asignamos al botón
@@ -338,7 +343,7 @@ history: historyRecord[] = [];
 <button class="plus-button" (click)="saveHistory()">Save</button>
 ```
 
-## Listo, tenemos el historial en una variable que usaremos más adelante.
+## Listo, tenemos el historial en una variable que usaremos más adelante. Probemosla.
 
 # Actividad #3: Creemos un nuevo componente para el historial
 
@@ -350,7 +355,7 @@ history: historyRecord[] = [];
 ng g c components/list --skip-tests
 ```
 
-¿Que vemos aquí?
+¿Qué vemos aquí?
 
 -   "ng" se refiere al CLI de Angular.
 -   "g" es la abreviatura de "generate", lo que significa que estamos generando un nuevo archivo o componente.
@@ -358,7 +363,7 @@ ng g c components/list --skip-tests
 -   "components/list" es el nombre del nuevo componente que se está generando. En este caso, el nombre del componente es "list" y se colocará en la carpeta "components".
 -   "--skip-tests" es una opción que se puede agregar al comando para indicar que no se deben generar archivos de prueba para el componente.
 
-Por lo tanto, en resumen, el comando "ng g c components/list --skip-tests" genera un nuevo componente llamado "list" en la carpeta "components" de un proyecto Angular y omite la generación de archivos de prueba para el componente recién creado.
+El comando "ng g c components/list --skip-tests", entonces, genera un nuevo componente llamado "list" en la carpeta "components" y omite la generación de archivos de prueba para el mismo.
 
 3.- Generamos un segundo componente
 
@@ -376,18 +381,18 @@ ng serve
 
 ```html
 <div class="container">
-  <button class="minus-button" (click)="substract5()">-5</button>
-  <button class="minus-button" (click)="substract()">-</button>
-  <p class="counter">{{counter}}</p>
-  <button class="plus-button" (click)="plus()">+</button>
-  <button class="plus-button" (click)="plus5()">+5</button>
-  <br>
-  <button class="plus-button" (click)="saveHistory()">Save</button>
+  <button class="minus-button" (click)="substract5()">-5</button>
+  <button class="minus-button" (click)="substract()">-</button>
+  <p class="counter">{{counter}}</p>
+  <button class="plus-button" (click)="plus()">+</button>
+  <button class="plus-button" (click)="plus5()">+5</button>
+  <br>
+  <button class="plus-button" (click)="saveHistory()">Save</button>
 </div>
 <app-list></app-list>
 ```
 
-6.- Observamos nuevamente nuestra vista.
+6.- Observamos nuevamente nuestra vista. ¿Qué sucede?
 
 7.- Agregamos el app-list-item a app-list
 
@@ -396,96 +401,96 @@ ng serve
 <app-list-item></app-list-item>
 ```
 
-8.- Observamos nuestra vista nuevamente
+8.- Observamos nuestra vista nuevamente. ¿Qué cambió?
 
-9.- Ajustamos la vista del app-list-item
+9.- Realizamos los siguientes cambios a nuestro componente app-list-item
 
 Vista
 ```html
 <div class="item">
-    <p>{{count}}</p>
-    <p>{{date}}</p>
+    <p>{{count}}</p>
+    <p>{{date}}</p>
 </div>
 ```
 
 Clase
 ```typescript
 export class ListItemComponent {
-  count: number = 0;
-  date: string = "12/12/2022, 12:12:12";
+  count: number = 0;
+  date: string = "12/12/2022, 12:12:12";
 }
 ```
 
 Estilos
 ```css
 .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: burlywood;
-    margin: 25px 50px;
-    padding: 8px;
-    border-radius: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: burlywood;
+    margin: 25px 50px;
+    padding: 8px;
+    border-radius: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 ```
 
-10.- Observamos nuestra vista
+10.- Observamos nuestra vista. ¿QUe observamos?
 
-11.- Ajustamos el app-list
+11.- Ahora modificaremos nuestro app-list
 
 vista
 ```html
 <h1 class="title">History</h1>
 <div class="container">
-    <app-list-item></app-list-item>
-    <app-list-item></app-list-item>
-    <app-list-item></app-list-item>
+    <app-list-item></app-list-item>
+    <app-list-item></app-list-item>
+    <app-list-item></app-list-item>
 </div>
 ```
 
 estilos
 ```css
 .title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-bottom: 6px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 6px solid black;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 ```
 
-# Listo, continuemos
+### ¿Listo?, continuemos.
 
 # Actividad #4: Recibamos el history en el list
 
-1.- Agregamos la siguiente linea en el list.component.ts
+1.- Agregamos la siguiente línea en el list.component.ts
 
 ```typescript
 @Input() history: any[] = [];
 ```
 
-2.- Modificamos el app-list de la vista de  app.component
+2.- Modificamos el app-list de la vista de app.component
 
 ```html
 <app-list [history]="history"></app-list>
 ```
 
-3.- Retiramos el console.log de la funcion de guardar el historial
+3.- Retiramos el console.log de la función de guardar el historial
 
 ```typescript
 saveHistory(): void {
-    this.history.push({
-      count: this.counter,
-      date: new Date().toLocaleString()
-    });
-  }
+    this.history.push({
+      count: this.counter,
+      date: new Date().toLocaleString()
+    });
+  }
 ```
 
 4.- Modificamos la vista de app-list de la siguiente manera
@@ -506,30 +511,21 @@ saveHistory(): void {
 ```html
 <h1 class="title">History</h1>
 <div class="container">
-    <app-list-item *ngFor="let element of history"></app-list-item>
+    <app-list-item *ngFor="let element of history"></app-list-item>
 </div>
 ```
 
 2.- Entendamos el comportamiento
 
-# Puedes hacer que se reciban estos valores en el historial y se muestren bien? Intentalo
+# ¿Puedes hacer que se reciban estos valores en el historial y se muestren bien? Intentalo.
 
-
-
-
-
-
-
-
-
-
-
+### ¿Listo? Continuemos.
 
 1.- Agregamos estas dos variables al componente de app-list-item
 
 ```typescript
 @Input() count: number = 0;
- @Input() date: string = "";
+ @Input() date: string = "";
 ```
 
 2.- Modificamos la vista de app-list
@@ -537,16 +533,15 @@ saveHistory(): void {
 ```html
 <h1 class="title">History</h1>
 <div class="container">
-    <app-list-item *ngFor="let element of history" [count]="element.count" [date]="element.date"></app-list-item>
+    <app-list-item *ngFor="let element of history" [count]="element.count" [date]="element.date"></app-list-item>
 </div>
 ```
 
-
-# ¿Puedes agregar un boton adicional que limpie el historial? Intentalo
+# ¿Puedes agregar un botón adicional que limpie el historial? Intentalo
 
 # Los pipes
 
-Continuemos con una práctica distinta a la anterior, siguamos los siguientes pasos:
+Continuemos con una práctica distinta a la anterior, sigamos los siguientes pasos:
 
 1.- Iniciamos un nuevo proyecto de angular de la misma manera en que lo hicimos anteriormente.
 
@@ -558,7 +553,7 @@ cd new-project
 ng serve
 ```
 
-2.- Limpiamos la vista
+2.- Limpiamos la vista de nuestro componente app
 
 3.- Agregamos el siguiente código a la vista
 ```html
@@ -569,7 +564,7 @@ ng serve
 </div>
 ```
 
-4.- Agregamos el siguiente código a los estilos
+4.- Agregamos los siguientes estilos
 ```css
 .container {
     display: flex;
@@ -604,11 +599,11 @@ readonly money: number = 12300.12;
 </div>
 ```
 
-7.- Agregamos nuestro primer div
+7.- Agregamos nuestro primer pipe, como se muestra a continuación
 ```html
 <div class="card">{{name | uppercase}}</div>
 ```
-8.- ¿Que está pasando?
+8.- ¿Qué está pasando?
 
 En Angular, un "pipe" es una función que se utiliza para transformar los datos de un valor de entrada en otro valor de salida, de una forma determinada y predefinida.
 
@@ -618,35 +613,35 @@ Los pipes se utilizan en la plantilla HTML de Angular mediante el carácter "|" 
 
 En resumen, un pipe en Angular te permite transformar datos de una forma fácil y eficiente para que se muestren de la forma que deseas en la interfaz de usuario.
 
-9.- Agregamos los siguientes pipes
+9.- Agregamos los siguientes pipes para observar su comportamiento
 ```html
 <div class="card">{{name | uppercase}}</div>
 <div class="card">{{name | lowercase}}</div>
 <div class="card">{{name | titlecase}}</div>
 ```
 
-10.- Agregamos el siguiente pipe
+10.- Agregamos el siguiente pipe a los que ya tenemos
 ```html
 <div class="card">{{age | percent}}</div>
 ```
 
-11.- ¿Como hacemos que sea 20%? Intentalo
+11.- ¿Cómo hacemos que sea 20%? Intentalo
 
 12.- Agregamos el siguiente pipe
 ```html
 <div class="card">{{money | currency}}</div>
 ```
 
-13.- Ahora agreguemos un cambio mas
+13.- Ahora agreguemos un cambio más y observemos que sucede ¿Son... parámetros?
 ```html
   <div class="card">{{money | currency:'USD'}}</div>
   <div class="card">{{money | currency:'EUR'}}</div>
   <div class="card">{{money | currency:'MXN'}}</div>
 ```
 
-# Listo, fue muy rápido
+# Listo, fue muy sencillo ¿verdad?
 
-Los pipes son herramientas muy utiles que nos ayudan a conseguir muchas cosas de manera sencilla y es un agregado de Angular que facilita el formateo de valores en la vista. Hay muchas cosas más que podemos hacer con los pipes, como el hecho de que podemos crear nuestros Pipes personalizados entre otras cosas.
+Los pipes son herramientas muy útiles que nos ayudan a conseguir muchas cosas de manera sencilla y es un agregado de Angular que facilita el formateo de valores en la vista. Hay muchas cosas más que podemos hacer con los pipes, como el hecho de que podemos crear nuestros Pipes personalizados entre otras, sin embargo, no podemos abarcar todo en este taller, así que estás invitado a descubrir más acerca de los Pipes.
 
 # Consumiendo una API con servicios
 
@@ -677,29 +672,29 @@ imports: [
   ],
 ```
 
-6.- Importamos el modulo http en el servicio que creamos
+¿Que acabamos de hacer? Escucha a tu instructor para una explicación detallada.
+
+6.- Importamos el módulo `HttpClient` en el servicio que creamos
 
 ```typescript
 import { HttpClient } from "@angular/common/http";
 ```
 
-7.- Colocamos el modulo en el constructor
+7.- Colocamos el módulo en el constructor
 ```typescript
 constructor(public httpClient: HttpClient) { }
 ```
 
-El parámetro "public httpClient" indica que se está inyectando el servicio HttpClient en la clase y se está declarando una variable llamada "httpClient" que puede ser utilizada en toda la clase.
+El parámetro "public httpClient" indica que se está inyectando el servicio HttpClient en la clase y se está declarando una variable llamada "httpClient" que puede ser utilizada en la misma.
 
 HttpClient es un servicio proporcionado por Angular que permite realizar solicitudes HTTP, como GET, POST, PUT y DELETE, a un servidor remoto. Este servicio está diseñado para ser utilizado en aplicaciones web para recuperar datos de una API RESTful.
 
-8.- Hacemos una funcion para hacer la request
+8.- Hacemos una función para hacer una request GET sencilla a una API pública de ejemplo
 ```typescript
 makeRequest() {
     return this.httpClient.get('https://dummy.restapiexample.com/api/v1/employees');
   }
 ```
-
-Estamos usando una API Online de ejemplo.
 
 9.- Inyectamos el servicio en el app.component
 
@@ -707,7 +702,7 @@ Estamos usando una API Online de ejemplo.
 constructor(public api: UsingApiService) {}
 ```
 
-10.- Ejecutamos la peticion en el constructor
+10.- Ejecutamos la petición en el constructor de la siguiente manera
 ```typescript
 constructor(public api: UsingApiService) {
     api.makeRequest().subscribe((res) => {
@@ -715,10 +710,11 @@ constructor(public api: UsingApiService) {
     })
   }
 ```
-11.- ¿Que esta pasando?
-Estamos realizando la llamada a la API mediante el servicio que hemos creado. Presta atención a tu instructor para poder comprender mejor como es que funcionan los obervables en RXJS.
+11.- ¿Qué está pasando?
 
-12.- Limpiemos la vista y agreguemos un boton para hacer la request
+Estamos realizando la llamada a la API mediante el servicio que hemos creado. Presta atención a tu instructor para poder comprender mejor cómo es que funcionan los observables en RXJS.
+
+12.- Limpiemos la vista y agreguemos un botón para hacer la request
 
 ```html
 <button (click)="request()">Make request</button>
@@ -772,7 +768,7 @@ ng serve
 }
 ```
 
-20.- Modificamos el componente del app para obtener los resultados de la peticion
+20.- Modificamos el componente del app para obtener los resultados de la petición
 ```typescript
   results: any[] = [];
 
@@ -783,7 +779,7 @@ ng serve
   }
 ```
 
-19.- La vista de app la dejaremos asi
+19.- La vista de app la dejaremos así
 ```html
 <button (click)="request()">Make request</button>
 <app-card *ngFor="let value of results" 
@@ -793,4 +789,4 @@ ng serve
 </app-card>
 ```
 
-# Prestemos atención al instructor y continuemos con ejemplos más sencillos con los conocimientos que hemos adquirido.
+# Prestemos atención al instructor para terminar el taller y continuemos con ejemplos más sencillos con los conocimientos que hemos adquirido.
