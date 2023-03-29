@@ -437,7 +437,7 @@ Estilos
 }
 ```
 
-10.- Observamos nuestra vista. ¿QUe observamos?
+10.- Observamos nuestra vista. ¿Qué observamos?
 
 11.- Ahora modificaremos nuestro app-list
 
@@ -470,7 +470,7 @@ estilos
 
 # Actividad #4: Recibamos el history en el list
 
-1.- Agregamos la siguiente línea en el list.component.ts
+1.- Agregamos la siguiente línea en el list.component.ts (presta atención a tu instructor para poder conocer como importar y donde colocar esta funcionalidad)
 
 ```typescript
 @Input() history: any[] = [];
