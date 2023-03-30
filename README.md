@@ -315,7 +315,7 @@ substract(): void {
 ```typescript
 interface historyRecord {
   count: number;
-  date: Date
+  date: String
 }
 ```
 
