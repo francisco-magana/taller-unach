@@ -76,7 +76,7 @@ A continuación se presentan algunas de las principales funciones de Angular CLI
 
 4.  Compilación y ejecución: Angular CLI proporciona comandos para compilar y ejecutar una aplicación Angular. El comando de compilación de Angular CLI compila el código TypeScript en código JavaScript y genera una versión optimizada de la aplicación para producción. El comando de ejecución de Angular CLI inicia un servidor web local y muestra la aplicación en el navegador.
 
-5.  Pruebas: Angular CLI proporciona comandos para ejecutar pruebas en una aplicación Angular. El comando de prueba de Angular CLI ejecuta todas las pruebas unitarias y de integración en la aplicación y proporciona informes detallados sobre
+5.  Pruebas: Angular CLI proporciona comandos para ejecutar pruebas en una aplicación Angular. El comando de prueba de Angular CLI ejecuta todas las pruebas unitarias y de integración en la aplicación.
 
 Instalamos mediante el gestor de paquetes `npm`:
 
