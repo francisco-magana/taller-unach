@@ -4,45 +4,45 @@ Angular es un framework de desarrollo web basado en TypeScript que permite el de
 
 # ¿Por qué utilizar un framework para desarrollar una aplicación front end?
 
-- Productividad: Los frameworks proporcionan herramientas y funcionalidades preconstruidas que permiten acelerar el proceso de desarrollo. Al utilizar estas herramientas, los desarrolladores pueden concentrarse en la lógica de negocio y las características únicas de la aplicación en lugar de tener que desarrollar todo desde cero.
+- **Productividad**: Los frameworks proporcionan herramientas y funcionalidades preconstruidas que permiten acelerar el proceso de desarrollo. Al utilizar estas herramientas, los desarrolladores pueden concentrarse en la lógica de negocio y las características únicas de la aplicación en lugar de tener que desarrollar todo desde cero.
 
-- Consistencia: Los frameworks proporcionan un conjunto de reglas y convenciones que garantizan que el código sea coherente y fácil de mantener. Esto es especialmente importante cuando se trabaja en equipo, ya que garantiza que todos los desarrolladores estén siguiendo las mismas prácticas y estándares.
+- **Consistencia**: Los frameworks proporcionan un conjunto de reglas y convenciones que garantizan que el código sea coherente y fácil de mantener. Esto es especialmente importante cuando se trabaja en equipo, ya que garantiza que todos los desarrolladores estén siguiendo las mismas prácticas y estándares.
 
-- Mantenibilidad: Los frameworks están diseñados para ser modulares y escalables, lo que facilita la adición de nuevas funcionalidades y la solución de problemas en el futuro. Esto permite a los desarrolladores realizar cambios de manera más rápida y eficiente en el futuro.
+- **Mantenibilidad**: Los frameworks están diseñados para ser modulares y escalables, lo que facilita la adición de nuevas funcionalidades y la solución de problemas en el futuro. Esto permite a los desarrolladores realizar cambios de manera más rápida y eficiente en el futuro.
 
-- Comunidad de soporte: Muchos frameworks tienen una gran comunidad de usuarios y desarrolladores que contribuyen al código y ofrecen soporte y recursos para el desarrollo. Esto significa que los desarrolladores pueden encontrar soluciones rápidas y efectivas para cualquier problema que puedan tener.
+- **Comunidad de soporte**: Muchos frameworks tienen una gran comunidad de usuarios y desarrolladores que contribuyen al código y ofrecen soporte y recursos para el desarrollo. Esto significa que los desarrolladores pueden encontrar soluciones rápidas y efectivas para cualquier problema que puedan tener.
 
-- Actualizaciones regulares: Los frameworks son actualizados regularmente para abordar problemas de seguridad, errores y agregar nuevas funcionalidades. Esto significa que los desarrolladores pueden mantenerse al día con las últimas tecnologías y mejores prácticas sin tener que investigar y actualizar el código manualmente.
+- **Actualizaciones regulares**: Los frameworks son actualizados regularmente para abordar problemas de seguridad, errores y agregar nuevas funcionalidades. Esto significa que los desarrolladores pueden mantenerse al día con las últimas tecnologías y mejores prácticas sin tener que investigar y actualizar el código manualmente.
 
 
 # ¿Por qué desarrollar una aplicación utilizando componentes?
 
-- Modularidad: Los componentes son bloques de código independientes y reutilizables que encapsulan la lógica de negocio y la interfaz de usuario de una aplicación web. Esto permite que los desarrolladores puedan trabajar en diferentes componentes de forma separada y coordinada, lo que facilita el mantenimiento y la escalabilidad de la aplicación.
+- **Modularidad**: Los componentes son bloques de código independientes y reutilizables que encapsulan la lógica de negocio y la interfaz de usuario de una aplicación web. Esto permite que los desarrolladores puedan trabajar en diferentes componentes de forma separada y coordinada, lo que facilita el mantenimiento y la escalabilidad de la aplicación.
 
-- Reutilización: Al utilizar componentes, los desarrolladores pueden crear bloques de código que se pueden reutilizar en diferentes partes de la aplicación. Esto reduce el tiempo y el esfuerzo necesario para desarrollar nuevas funcionalidades y mejora la consistencia y la coherencia de la aplicación.
+- **Reutilización**: Al utilizar componentes, los desarrolladores pueden crear bloques de código que se pueden reutilizar en diferentes partes de la aplicación. Esto reduce el tiempo y el esfuerzo necesario para desarrollar nuevas funcionalidades y mejora la consistencia y la coherencia de la aplicación.
 
-- Separación de preocupaciones: Al separar la lógica de negocio y la interfaz de usuario en diferentes componentes, se reduce la complejidad del código y se mejora la legibilidad y la mantenibilidad de la aplicación. Además, esto permite que diferentes equipos de desarrollo puedan trabajar en diferentes partes de la aplicación sin interferir con el trabajo de otros equipos.
+- **Separación de preocupaciones**: Al separar la lógica de negocio y la interfaz de usuario en diferentes componentes, se reduce la complejidad del código y se mejora la legibilidad y la mantenibilidad de la aplicación. Además, esto permite que diferentes equipos de desarrollo puedan trabajar en diferentes partes de la aplicación sin interferir con el trabajo de otros equipos.
 
-- Facilidad de prueba: Los componentes son bloques de código independientes que se pueden probar de forma aislada, lo que facilita la detección y corrección de errores y mejora la calidad y la fiabilidad de la aplicación.
+- **Facilidad de prueba**: Los componentes son bloques de código independientes que se pueden probar de forma aislada, lo que facilita la detección y corrección de errores y mejora la calidad y la fiabilidad de la aplicación.
 
-- Escalabilidad: Al utilizar componentes, se puede agregar o quitar funcionalidades de la aplicación de forma más sencilla y rápida, lo que mejora la capacidad de la aplicación para crecer y adaptarse a nuevas necesidades y requerimientos.
+- **Escalabilidad**: Al utilizar componentes, se puede agregar o quitar funcionalidades de la aplicación de forma más sencilla y rápida, lo que mejora la capacidad de la aplicación para crecer y adaptarse a nuevas necesidades y requerimientos.
 
 # ¿Por qué Angular?
 
-- Arquitectura robusta: Angular utiliza una arquitectura basada en componentes que separa claramente la lógica de negocio y la interfaz de usuario, lo que mejora la escalabilidad y mantenibilidad de la aplicación.
+- **Arquitectura robusta**: Angular utiliza una arquitectura basada en componentes que separa claramente la lógica de negocio y la interfaz de usuario, lo que mejora la escalabilidad y mantenibilidad de la aplicación.
 
-- TypeScript: Angular utiliza TypeScript, un lenguaje de programación que añade características adicionales a JavaScript, como la tipificación estática y otras características orientadas a objetos. Esto mejora la legibilidad y la seguridad del código y facilita el mantenimiento y la escalabilidad de la aplicación.
+- **TypeScript**: Angular utiliza TypeScript, un lenguaje de programación que añade características adicionales a JavaScript, como la tipificación estática y otras características orientadas a objetos. Esto mejora la legibilidad y la seguridad del código y facilita el mantenimiento y la escalabilidad de la aplicación.
 
-- Gran comunidad y documentación: Angular cuenta con una gran comunidad de desarrolladores y una amplia documentación, lo que facilita la resolución de problemas y la adopción de buenas prácticas.
+- **Gran comunidad y documentación**: Angular cuenta con una gran comunidad de desarrolladores y una amplia documentación, lo que facilita la resolución de problemas y la adopción de buenas prácticas.
 
-- Herramientas integradas: Angular ofrece una gran cantidad de herramientas y características integradas, como la gestión de rutas, la inyección de dependencias, la validación de formularios, entre otras, que permiten a los desarrolladores crear aplicaciones web de forma más rápida y eficiente.
+- **Herramientas integradas**: Angular ofrece una gran cantidad de herramientas y características integradas, como la gestión de rutas, la inyección de dependencias, la validación de formularios, entre otras, que permiten a los desarrolladores crear aplicaciones web de forma más rápida y eficiente.
 
-- Flexibilidad: Angular es un framework altamente flexible y adaptable a diferentes necesidades y requerimientos. Además, se puede integrar fácilmente con otras herramientas y tecnologías, lo que lo convierte en una herramienta muy útil para el desarrollo de aplicaciones web complejas.
+- **Flexibilidad**: Angular es un framework altamente flexible y adaptable a diferentes necesidades y requerimientos. Además, se puede integrar fácilmente con otras herramientas y tecnologías, lo que lo convierte en una herramienta muy útil para el desarrollo de aplicaciones web complejas.
 
 
 # ¿Qué necesitaremos para desarrollar este taller?
 
-- NodeJS - Runtime de JavasCript para el servidor
+- NodeJS - Runtime de JavaScript para el servidor
 - VScode o tu editor favorito 😉
 - GIT - Control de versiones
 
